@@ -9,13 +9,13 @@
           "conditions": [
             {
               "condition": "minecraft:block_state_property",
-              "block": "cultivation:ironleaf",
+              "block": "cultivation:volcapod",
               "properties": {
                 "age": "7"
               }
             }
           ],
-          "name": "cultivation:ironleaf_seeds"
+          "name": "cultivation:volcapod_seeds"
         }
       ]
     },
@@ -30,48 +30,19 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "cultivation:ironleaf",
+                  "block": "cultivation:volcapod",
                   "properties": {
                     "age": "7"
                   }
                 }
               ],
-              "name": "cultivation:iron_dust"
+              "name": "cultivation:magma_core"
             },
             {
               "type": "minecraft:item",
-              "name": "cultivation:ironleaf_seeds"
+              "name": "cultivation:volcapod_seeds"
             }
           ]
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:binomial_with_bonus_count",
-              "parameters": {
-                "extra": 3,
-                "probability": 0.5714286
-              }
-            }
-          ],
-          "name": "cultivation:ironleaf_seeds"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:block_state_property",
-          "block": "cultivation:ironleaf",
-          "properties": {
-            "age": "7"
-          }
         }
       ]
     }

@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.maroonangel.cultivation.block.Blocks;
 import net.maroonangel.cultivation.misc.Compostibles;
+import net.maroonangel.cultivation.misc.Fuels;
 import net.maroonangel.cultivation.misc.LootTables;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -23,5 +24,6 @@ public class Cultivation implements ModInitializer {
 		LootTables.register();
 		Compostibles.register();
 		Blocks.register();
+		Fuels.register();
 	}
 }

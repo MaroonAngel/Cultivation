@@ -31,9 +31,21 @@ public class Plants {
             .setTickRate(18)
             .build();
 
+    public static final Crop volcapod = new Crop(new Identifier(MODID, "volcapod"))
+            .setItemGroup(Cultivation.GROUP)
+            .setCropGrowthBoundingBoxes(CropBoundingBoxFactory.buildBoundingBoxes( new float[]{1, 2, 3, 4, 5, 6, 7, 8} ))
+            .setSeperateSeed(true)
+            .setSeedGroup(Cultivation.GROUP)
+            .setPartialHarvest(false)
+            .setItem(Items.MAGMA_CORE)
+            .setSeedRarity(Rarity.RARE)
+            .setTickRate(35)
+            .build();
+
 
     public static void register() {
         cotton.register();
         ironleaf.register();
+        volcapod.register();
     }
 }

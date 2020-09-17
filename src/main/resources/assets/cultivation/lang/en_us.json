@@ -10,5 +10,7 @@
     "item.cultivation.plant_fibers": "Plant Fibers",
     "block.cultivation.sieve_block": "Sieve",
     "item.cultivation.pebble": "Pebble",
-    "item.cultivation.cooked_egg": "Cooked Egg"
+    "item.cultivation.cooked_egg": "Cooked Egg",
+    "block.cultivation.volcapod": "Volcapod Seeds",
+    "item.cultivation.magma_core": "Magma Core"
 }
