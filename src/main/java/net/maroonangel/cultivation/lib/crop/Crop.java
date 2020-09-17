@@ -33,8 +33,7 @@ public class Crop {
     private boolean partialharvest;
     private boolean customItem;
 
-
-    private int yield;
+    private int tickRate;
 
     private VoxelShape[] growthBoundingBoxes;
 
@@ -48,7 +47,7 @@ public class Crop {
         this.itemgroup = ItemGroup.FOOD;
         this.food = null;
         this.growthBoundingBoxes = null;
-        this.yield = 1;
+        this.tickRate = 25;
         this.rarity = Rarity.COMMON;
     }
 
@@ -122,8 +121,8 @@ public class Crop {
         return this;
     }
 
-    public Crop setYield(int yield) {
-        this.yield = yield;
+    public Crop setTickRate(int rate) {
+        this.tickRate = rate;
         return this;
     }
 
@@ -132,7 +131,7 @@ public class Crop {
                 .setGrowthBoundingBoxes(this.growthBoundingBoxes)
                 .setTwoTall(this.twotall)
                 .setPartialHarvest(this.partialharvest)
-                .setYield(this.yield);
+                .setTickRate(this.tickRate);
         if (this.seperateseed) {
             this.seed = new CropItem(this.block, new Item.Settings().group(this.seedgroup).rarity(this.rarity));
             if (item == null)

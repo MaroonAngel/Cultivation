@@ -51,7 +51,7 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
     private VoxelShape[] growthBoundingBoxes;
     private boolean twotall;
     private boolean partialharvest;
-    private int yield;
+    private int tickRate;
 
     public CropBlock(Settings settings, Identifier id, Identifier itemid) {
         super(settings);
@@ -61,7 +61,7 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
         this.partialharvest = false;
         this.growthBoundingBoxes = CropBoundingBoxFactory.buildBoundingBoxes(new float[]{2, 4, 6, 8, 10, 12, 14, 16});
         this.setDefaultState(this.getDefaultState().with(HALF, DoubleBlockHalf.LOWER));
-        this.yield = 1;
+        this.tickRate = 25;
     }
 
     public static void dropStacks(BlockState state, World world, BlockPos pos, BlockEntity blockEntity, Entity entity, ItemStack stack) {
@@ -86,8 +86,8 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
         return this;
     }
 
-    public CropBlock setYield(int yield) {
-        this.yield = yield;
+    public CropBlock setTickRate(int tickrate) {
+        this.tickRate = tickrate;
         return this;
     }
 
@@ -139,7 +139,7 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
             world.setBlockState(pos.up(), this.getDefaultState().with(HALF, DoubleBlockHalf.UPPER), 3);
             world.setBlockEntity(pos.up(), world.getBlockEntity(pos));
         }
-        world.getBlockTickScheduler().schedule(pos, this, this.getTickRate(world, pos));
+        world.getBlockTickScheduler().schedule(pos, this, 100);
     }
 
     @Override
@@ -266,21 +266,7 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
 
 
     public int getTickRate(WorldView world) {
-        return 10;
-    }
-
-    public int getTickRate(WorldView world, BlockPos pos) {
-        int growth = 1;
-        if (pos != null) {
-            BlockEntity entity = world.getBlockEntity(pos);
-            if (entity.toTag(new CompoundTag()).getCompound("Genes") != null) {
-                growth = world.getBlockEntity(pos).toTag(new CompoundTag()).getCompound("Genes").getInt("growth");
-            }
-        }
-        if (growth < 1) {
-            growth = 1;
-        }
-        return (this.getTickRate(world) / growth);
+        return this.tickRate;
     }
 
     public EnumProperty<DoubleBlockHalf> getBlockHalfProperty() {
@@ -303,12 +289,12 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
     }
 
     @Override
-    public void scheduledTick(BlockState state, ServerWorld server, BlockPos pos, Random rand) {
+    public void randomTick(BlockState state, ServerWorld server, BlockPos pos, Random rand) {
         if (this.getBlockHalf(state).equals(DoubleBlockHalf.LOWER)) {
             int age = this.getAge(state);
             if (age < this.getMaxAge()) {
                 float moisture = getAvailableMoisture(this, server, pos);
-                if (rand.nextInt((int)(25.0F / moisture) + 1) == 0) {
+                if (rand.nextInt((int)((float)this.tickRate / moisture) + 1) == 0) {
                     server.setBlockState(pos, this.withAge(age + 1));
                     if (this.twotall) {
                         server.setBlockState(pos.up(), server.getBlockState(pos.up()).with(this.getAgeProperty(), age + 1));

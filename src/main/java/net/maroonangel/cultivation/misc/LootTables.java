@@ -49,9 +49,6 @@ public class LootTables {
         insert(new LootTableInsert(PLANT_FIBERS,
                 new Identifier("minecraft", "blocks/grass")
         ));
-        insert(new LootTableInsert(PLANT_FIBERS,
-                new Identifier("minecraft", "blocks/grass")
-        ));
 
         // Perform Callback insertion
         LootTableLoadingCallback.EVENT.register(((resourceManager, lootManager, identifier, supplier, lootTableSetter) -> {

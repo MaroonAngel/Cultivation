@@ -28,6 +28,7 @@ public class Plants {
             .setPartialHarvest(false)
             .setItem(Items.IRON_DUST)
             .setSeedRarity(Rarity.UNCOMMON)
+            .setTickRate(18)
             .build();
 
 
