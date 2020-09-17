@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "cultivation:block/sieve_block" }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I ",
+    "IDI",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "cultivation:iron_dust"
+    },
+    "D": {
+      "item": "minecraft:wheat_seeds"
+    }
+  },
+  "result": {
+    "item": "cultivation:ironleaf_seeds"
+  }
+}

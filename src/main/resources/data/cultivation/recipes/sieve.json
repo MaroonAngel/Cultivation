@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I ",
+    "IDI",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "D": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "cultivation:sieve"
+  }
+}
