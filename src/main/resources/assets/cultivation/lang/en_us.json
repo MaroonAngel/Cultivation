@@ -12,5 +12,9 @@
     "item.cultivation.pebble": "Pebble",
     "item.cultivation.cooked_egg": "Cooked Egg",
     "block.cultivation.volcapod": "Volcapod Seeds",
-    "item.cultivation.magma_core": "Magma Core"
+    "item.cultivation.magma_core": "Magma Core",
+    "item.cultivation.niter_dust": "Niter Dust",
+    "item.cultivation.gold_dust": "Gold Dust",
+    "block.cultivation.raingrass": "Raingrass Seeds",
+    "block.cultivation.pod_shell": "Pod Shell"
 }

@@ -31,6 +31,16 @@ public class Plants {
             .setTickRate(18)
             .build();
 
+    public static final Crop raingrass = new Crop(new Identifier(MODID, "raingrass"))
+            .setItemGroup(Cultivation.GROUP)
+            .setCropGrowthBoundingBoxes(CropBoundingBoxFactory.buildBoundingBoxes( new float[]{1, 2, 3, 4, 5, 6, 7, 8} ))
+            .setSeperateSeed(true)
+            .setSeedGroup(Cultivation.GROUP)
+            .setPartialHarvest(false)
+            .setItem(net.minecraft.item.Items.LAPIS_LAZULI)
+            .setTickRate(18)
+            .build();
+
     public static final Crop volcapod = new Crop(new Identifier(MODID, "volcapod"))
             .setItemGroup(Cultivation.GROUP)
             .setCropGrowthBoundingBoxes(CropBoundingBoxFactory.buildBoundingBoxes( new float[]{1, 2, 3, 4, 5, 6, 7, 8} ))
@@ -42,10 +52,10 @@ public class Plants {
             .setTickRate(35)
             .build();
 
-
     public static void register() {
         cotton.register();
         ironleaf.register();
+        raingrass.register();
         volcapod.register();
     }
 }

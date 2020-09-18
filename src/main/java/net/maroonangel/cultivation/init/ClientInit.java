@@ -10,6 +10,7 @@ public class ClientInit implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks.SIEVE_BLOCK, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.POD_SHELL, RenderLayer.getCutout());
     }
 
 }
