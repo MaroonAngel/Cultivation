@@ -16,7 +16,7 @@ public class Items {
     public static final Item IRON_DUST = new Item((new Item.Settings().group(Cultivation.GROUP)));
     public static final Item NITER_DUST = new Item((new Item.Settings().group(Cultivation.GROUP)));
     public static final Item GOLD_DUST = new Item((new Item.Settings().group(Cultivation.GROUP)));
-    public static final Item MORTAR_AND_PESTLE = new Item((new Item.Settings().group(Cultivation.GROUP).maxCount(1)));
+    public static final ItemMortarAndPestle MORTAR_AND_PESTLE = new ItemMortarAndPestle((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(50)));
     public static final Item PLANT_FIBERS = new Item((new Item.Settings().group(Cultivation.GROUP)));
     public static final Item PEBBLE = new Item((new Item.Settings().group(Cultivation.GROUP)));
     public static final Item MAGMA_CORE = new Item((new Item.Settings().group(Cultivation.GROUP).rarity(Rarity.RARE).maxCount(16)));

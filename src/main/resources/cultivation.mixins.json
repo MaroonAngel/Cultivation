@@ -4,6 +4,7 @@
   "package": "net.maroonangel.cultivation.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "ShapelessRecipeMixin"
   ],
   "client": [
     "DefaultBiomeFeaturesMixin"
