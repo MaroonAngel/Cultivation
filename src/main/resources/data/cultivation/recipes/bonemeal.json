@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cultivation:niter_dust"
+    }
+  ],
+  "result": {
+    "item": "minecraft:bone_meal",
+    "count": 2
+  }
+}

@@ -224,7 +224,10 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
                     int yield = 3;
                     stack.setCount( (Integer) (stack.getCount() * ((yield + 3)/4) ));
                     if (stack.getItem() == this.getSeedsItem()) {
-                        stack.setCount(0);
+                        stack.setCount(world.random.nextInt(2));
+                        if (stack.getCount() > 1)
+                            stack.setCount(1);
+                        System.out.println(stack.getCount());
                         /*
                         if (this.partialharvest || (stack.getItem() == Plants.ironleaf.getSeed())) {
                             stack.setCount(0);

@@ -7,14 +7,14 @@
   ],
   "key": {
     "I": {
-      "item": "minecraft:cobblestone"
+      "tag": "minecraft:logs"
     },
     "D": {
       "item": "cultivation:magma_core"
     }
   },
   "result": {
-    "item": "minecraft:magma_block",
-    "count": 8
+    "item": "minecraft:charcoal",
+    "count": 12
   }
 }
