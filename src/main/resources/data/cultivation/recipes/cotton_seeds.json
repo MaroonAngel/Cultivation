@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cultivation:cotton"
+    }
+  ],
+  "result": {
+    "item": "cultivation:cotton_seeds",
+    "count": 1
+  }
+}

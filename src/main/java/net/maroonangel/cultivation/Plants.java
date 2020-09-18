@@ -28,7 +28,7 @@ public class Plants {
             .setPartialHarvest(false)
             .setItem(Items.IRON_DUST)
             .setSeedRarity(Rarity.UNCOMMON)
-            .setTickRate(18)
+            .setTickRate(15)
             .build();
 
     public static final Crop raingrass = new Crop(new Identifier(MODID, "raingrass"))
@@ -38,7 +38,7 @@ public class Plants {
             .setSeedGroup(Cultivation.GROUP)
             .setPartialHarvest(false)
             .setItem(net.minecraft.item.Items.LAPIS_LAZULI)
-            .setTickRate(18)
+            .setTickRate(15)
             .build();
 
     public static final Crop volcapod = new Crop(new Identifier(MODID, "volcapod"))
@@ -49,7 +49,7 @@ public class Plants {
             .setPartialHarvest(false)
             .setItem(Items.MAGMA_CORE)
             .setSeedRarity(Rarity.RARE)
-            .setTickRate(35)
+            .setTickRate(22)
             .build();
 
     public static void register() {

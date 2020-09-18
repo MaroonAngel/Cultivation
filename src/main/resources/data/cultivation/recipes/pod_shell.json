@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cultivation:magma_core"
+    },
+    {
+      "item": "cultivation:mortar_and_pestle"
+    }
+  ],
+  "result": {
+    "item": "cultivation:volcapod_seeds",
+    "count": 1
+  }
+}

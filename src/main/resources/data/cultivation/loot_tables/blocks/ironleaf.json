@@ -91,10 +91,73 @@
                 },
                 {
                   "condition": "random_chance",
+                  "chance": 0.5
+                }
+              ],
+              "functions": [
+                {
+                  "function": "set_count",
+                  "count": {
+                    "min": 1,
+                    "max": 2
+                  }
+                }
+              ],
+              "name": "cultivation:iron_dust"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "cultivation:ironleaf",
+                  "properties": {
+                    "age": "7"
+                  }
+                },
+                {
+                  "condition": "random_chance",
                   "chance": 0.1
                 }
               ],
               "name": "cultivation:gold_dust"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "cultivation:ironleaf",
+                  "properties": {
+                    "age": "7"
+                  }
+                },
+                {
+                  "condition": "random_chance",
+                  "chance": 0.5
+                }
+              ],
+              "name": "cultivation:ironleaf_seeds"
             }
           ]
         }
