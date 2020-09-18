@@ -19,6 +19,7 @@ public class Blocks {
 
     public static final Block SIEVE_BLOCK = new SieveBlock(FabricBlockSettings.of(Material.WOOD).hardness(0.6f).nonOpaque());
     public static final Block POD_SHELL = new PodShellBlock(FabricBlockSettings.of(Material.PLANT).hardness(0.3f).nonOpaque().noCollision());
+    //public static final Block CHEESE_BLOCK = new Block(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).hardness(0.6f));
 
 
     public static void register() {

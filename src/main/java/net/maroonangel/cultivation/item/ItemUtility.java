@@ -4,9 +4,9 @@ import net.maroonangel.cultivation.lib.CustomRecipeRemainder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class ItemMortarAndPestle extends Item implements CustomRecipeRemainder {
+public class ItemUtility extends Item implements CustomRecipeRemainder {
 
-    public ItemMortarAndPestle(Settings settings) {
+    public ItemUtility(Settings settings) {
         super(settings);
     }
 

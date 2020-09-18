@@ -1,12 +1,9 @@
 package net.maroonangel.cultivation.item;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.maroonangel.cultivation.Cultivation;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
@@ -16,13 +13,19 @@ public class Items {
     public static final Item IRON_DUST = new Item((new Item.Settings().group(Cultivation.GROUP)));
     public static final Item NITER_DUST = new Item((new Item.Settings().group(Cultivation.GROUP)));
     public static final Item GOLD_DUST = new Item((new Item.Settings().group(Cultivation.GROUP)));
-    public static final ItemMortarAndPestle MORTAR_AND_PESTLE = new ItemMortarAndPestle((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(50)));
+    public static final ItemUtility MORTAR_AND_PESTLE = new ItemUtility((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(100)));
+    public static final ItemUtility KNIFE = new ItemUtility((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(100)));
     public static final Item PLANT_FIBERS = new Item((new Item.Settings().group(Cultivation.GROUP)));
     public static final Item PEBBLE = new Item((new Item.Settings().group(Cultivation.GROUP)));
     public static final Item MAGMA_CORE = new Item((new Item.Settings().group(Cultivation.GROUP).rarity(Rarity.RARE).maxCount(16)));
+    public static final Item GROWTH_CORE = new Item((new Item.Settings().group(Cultivation.GROUP).rarity(Rarity.RARE).maxCount(16)));
     public static final Item POD_SHELL = new Item((new Item.Settings().group(Cultivation.GROUP)));
 
-    public static final Item COOKED_EGG = new Item((new Item.Settings().group(Cultivation.GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.5F).build())));
+    public static final Item COOKED_EGG = new Item((new Item.Settings().group(Cultivation.GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3F).build())));
+    public static final ItemDrink SWEET_BERRY_JAM = new ItemDrink((new Item.Settings().group(Cultivation.GROUP).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.3F).build())
+        .recipeRemainder(net.minecraft.item.Items.GLASS_BOTTLE).maxCount(16)));
+    public static final Item JAMMY_BREAD = new Item((new Item.Settings().group(Cultivation.GROUP).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.5F).build())));
+    public static final Item CACTUS_SLICE = new Item((new Item.Settings().group(Cultivation.GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.5F).build())));
 
 
     public static void register() {
@@ -31,12 +34,19 @@ public class Items {
         Registry.register(Registry.ITEM, new Identifier("cultivation", "niter_dust"), NITER_DUST);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "gold_dust"), GOLD_DUST);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "mortar_and_pestle"), MORTAR_AND_PESTLE);
+        Registry.register(Registry.ITEM, new Identifier("cultivation", "knife"), KNIFE);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "plant_fibers"), PLANT_FIBERS);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "pebble"), PEBBLE);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "magma_core"), MAGMA_CORE);
+        Registry.register(Registry.ITEM, new Identifier("cultivation", "growth_core"), GROWTH_CORE);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "pod_shell"), POD_SHELL);
-        FuelRegistry.INSTANCE.add(MAGMA_CORE, 20000);
 
         Registry.register(Registry.ITEM, new Identifier("cultivation", "cooked_egg"), COOKED_EGG);
+        Registry.register(Registry.ITEM, new Identifier("cultivation", "sweet_berry_jam"), SWEET_BERRY_JAM);
+        Registry.register(Registry.ITEM, new Identifier("cultivation", "jammy_bread"), JAMMY_BREAD);
+        Registry.register(Registry.ITEM, new Identifier("cultivation", "cactus_slice"), CACTUS_SLICE);
+
+
+        FuelRegistry.INSTANCE.add(MAGMA_CORE, 20000);
     }
 }

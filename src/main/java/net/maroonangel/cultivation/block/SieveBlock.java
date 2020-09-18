@@ -34,7 +34,7 @@ public class SieveBlock extends Block {
     public SieveBlock(Settings settings) {
         super(settings);
         usable.add(new Pair<Item, Pair<Item, Integer>>(net.minecraft.item.Items.DIRT, new Pair<Item, Integer>(Items.PEBBLE, 2)));
-
+        usable.add(new Pair<Item, Pair<Item, Integer>>(net.minecraft.item.Items.GRAVEL, new Pair<Item, Integer>(net.minecraft.item.Items.FLINT, 1)));
     }
 
     private Pair<Item, Integer> isUsable(Item item) {

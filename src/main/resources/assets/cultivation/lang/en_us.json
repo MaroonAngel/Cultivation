@@ -16,5 +16,11 @@
     "item.cultivation.niter_dust": "Niter Dust",
     "item.cultivation.gold_dust": "Gold Dust",
     "block.cultivation.raingrass": "Raingrass Seeds",
-    "item.cultivation.pod_shell": "Pod Shell"
+    "item.cultivation.pod_shell": "Pod Shell",
+    "block.cultivation.grovepod": "Grovepod Seeds",
+    "item.cultivation.growth_core": "Growth Core",
+    "item.cultivation.sweet_berry_jam": "Sweet Berry Jam",
+    "item.cultivation.jammy_bread": "Jammy Bread",
+    "item.cultivation.cactus_slice": "Cactus Slice",
+    "item.cultivation.knife": "Knife"
 }

@@ -49,7 +49,18 @@ public class Plants {
             .setPartialHarvest(false)
             .setItem(Items.MAGMA_CORE)
             .setSeedRarity(Rarity.RARE)
-            .setTickRate(22)
+            .setTickRate(40)
+            .build();
+
+    public static final Crop grovepod = new Crop(new Identifier(MODID, "grovepod"))
+            .setItemGroup(Cultivation.GROUP)
+            .setCropGrowthBoundingBoxes(CropBoundingBoxFactory.buildBoundingBoxes( new float[]{1, 2, 3, 4, 5, 6, 7, 8} ))
+            .setSeperateSeed(true)
+            .setSeedGroup(Cultivation.GROUP)
+            .setPartialHarvest(false)
+            .setItem(Items.GROWTH_CORE)
+            .setSeedRarity(Rarity.RARE)
+            .setTickRate(40)
             .build();
 
     public static void register() {
@@ -57,5 +68,6 @@ public class Plants {
         ironleaf.register();
         raingrass.register();
         volcapod.register();
+        grovepod.register();
     }
 }

@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "cultivation:block/grovepod_stage7"
+    }
+}

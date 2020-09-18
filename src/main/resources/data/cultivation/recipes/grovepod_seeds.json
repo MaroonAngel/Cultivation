@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GSG",
+    "SRS",
+    "GSG"
+  ],
+  "key": {
+    "G": {
+      "tag": "minecraft:leaves"
+    },
+    "S": {
+      "item": "cultivation:pod_shell"
+    },
+    "R": {
+      "item": "cultivation:raingrass_seeds"
+    }
+  },
+  "result": {
+    "item": "cultivation:grovepod_seeds"
+  }
+}
