@@ -1,0 +1,10 @@
+{
+	"name": "item.patchouli.cultivation_guidebook",
+	"landing_text": "Welcome to Cultivation!",
+	"version": 1,
+	"book_texture": "patchouli:textures/gui/book_green.png",
+	"model":"cultivation:guidebook",
+	"pause_game": false,
+	"subtitle": "A farmer's guide for progression.",
+	"creative_tab": "cultivation.general"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Seeds",
+  "icon": "cultivation:ironleaf_seeds",
+  "category": "getting_started",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Foraging for seeds",
+      "text": "To start your farming journey, you'll need to forage around for some seeds. In addition to wheat seeds, you can find two extra types of seeds in grass: cotton seeds and ironleaf seeds."
+    },
+    {
+      "type": "spotlight",
+      "item": "cultivation:cotton_seeds",
+      "text": "When grown, cotton plants will yield a few pieces of cotton. You can use 3 cotton in a crafting table to make string."
+    }
+  ]
+}

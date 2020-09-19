@@ -9,7 +9,8 @@ import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 public class Items {
-    public static final Item FLOUR = new Item((new Item.Settings().group(Cultivation.GROUP)));
+    public static final Item GUIDEBOOK = new Item((new Item.Settings().group(Cultivation.GROUP)));
+
     public static final Item IRON_DUST = new Item((new Item.Settings().group(Cultivation.GROUP)));
     public static final Item NITER_DUST = new Item((new Item.Settings().group(Cultivation.GROUP)));
     public static final Item GOLD_DUST = new Item((new Item.Settings().group(Cultivation.GROUP)));
@@ -26,10 +27,12 @@ public class Items {
         .recipeRemainder(net.minecraft.item.Items.GLASS_BOTTLE).maxCount(16)));
     public static final Item JAMMY_BREAD = new Item((new Item.Settings().group(Cultivation.GROUP).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.5F).build())));
     public static final Item CACTUS_SLICE = new Item((new Item.Settings().group(Cultivation.GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.5F).build())));
+    public static final Item CARROT_STEW = new Item((new Item.Settings().group(Cultivation.GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.6F).build()).recipeRemainder(net.minecraft.item.Items.BOWL)));
 
 
     public static void register() {
-        Registry.register(Registry.ITEM, new Identifier("cultivation", "flour"), FLOUR);
+        //Registry.register(Registry.ITEM, new Identifier("cultivation", "guidebook"), GUIDEBOOK);
+
         Registry.register(Registry.ITEM, new Identifier("cultivation", "iron_dust"), IRON_DUST);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "niter_dust"), NITER_DUST);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "gold_dust"), GOLD_DUST);
@@ -45,7 +48,7 @@ public class Items {
         Registry.register(Registry.ITEM, new Identifier("cultivation", "sweet_berry_jam"), SWEET_BERRY_JAM);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "jammy_bread"), JAMMY_BREAD);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "cactus_slice"), CACTUS_SLICE);
-
+        Registry.register(Registry.ITEM, new Identifier("cultivation", "carrot_stew"), CARROT_STEW);
 
         FuelRegistry.INSTANCE.add(MAGMA_CORE, 20000);
     }

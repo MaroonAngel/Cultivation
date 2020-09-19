@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "age=1": { "model": "cultivation:block/crystalis_stage1" },
+    "age=0": { "model": "cultivation:block/crystalis_stage0" },
+    "age=2": { "model": "cultivation:block/crystalis_stage2" },
+    "age=3": { "model": "cultivation:block/crystalis_stage3" },
+    "age=4": { "model": "cultivation:block/crystalis_stage4" },
+    "age=5": { "model": "cultivation:block/crystalis_stage5" },
+    "age=6": { "model": "cultivation:block/crystalis_stage6" },
+    "age=7": { "model": "cultivation:block/crystalis_stage7" }
+  }
+}

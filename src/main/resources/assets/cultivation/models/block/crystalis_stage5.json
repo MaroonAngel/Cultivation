@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "cultivation:block/crystalis_stage5"
+    }
+}

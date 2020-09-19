@@ -22,5 +22,9 @@
     "item.cultivation.sweet_berry_jam": "Sweet Berry Jam",
     "item.cultivation.jammy_bread": "Jammy Bread",
     "item.cultivation.cactus_slice": "Cactus Slice",
-    "item.cultivation.knife": "Knife"
+    "item.cultivation.knife": "Knife",
+    "item.cultivation.carrot_stew": "Carrot Stew",
+    "item.patchouli.cultivation_guidebook": "Cultivation Guidebook",
+    "block.cultivation.gemtree": "Gemtree Seeds",
+    "block.cultivation.crystalis": "Crystalis Seeds"
 }

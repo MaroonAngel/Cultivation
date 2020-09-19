@@ -48,7 +48,7 @@ public class Plants {
             .setSeedGroup(Cultivation.GROUP)
             .setPartialHarvest(false)
             .setItem(Items.MAGMA_CORE)
-            .setSeedRarity(Rarity.RARE)
+            .setSeedRarity(Rarity.UNCOMMON)
             .setTickRate(40)
             .build();
 
@@ -59,8 +59,30 @@ public class Plants {
             .setSeedGroup(Cultivation.GROUP)
             .setPartialHarvest(false)
             .setItem(Items.GROWTH_CORE)
-            .setSeedRarity(Rarity.RARE)
+            .setSeedRarity(Rarity.UNCOMMON)
             .setTickRate(40)
+            .build();
+
+    public static final Crop gemtree = new Crop(new Identifier(MODID, "gemtree"))
+            .setItemGroup(Cultivation.GROUP)
+            .setCropGrowthBoundingBoxes(CropBoundingBoxFactory.buildBoundingBoxes( new float[]{1, 2, 3, 4, 5, 6, 7, 8} ))
+            .setSeperateSeed(true)
+            .setSeedGroup(Cultivation.GROUP)
+            .setPartialHarvest(false)
+            .setItem(net.minecraft.item.Items.EMERALD)
+            .setSeedRarity(Rarity.RARE)
+            .setTickRate(35)
+            .build();
+
+    public static final Crop crystalis = new Crop(new Identifier(MODID, "crystalis"))
+            .setItemGroup(Cultivation.GROUP)
+            .setCropGrowthBoundingBoxes(CropBoundingBoxFactory.buildBoundingBoxes( new float[]{1, 2, 3, 4, 5, 6, 7, 8} ))
+            .setSeperateSeed(true)
+            .setSeedGroup(Cultivation.GROUP)
+            .setPartialHarvest(false)
+            .setItem(net.minecraft.item.Items.DIAMOND)
+            .setSeedRarity(Rarity.RARE)
+            .setTickRate(60)
             .build();
 
     public static void register() {
@@ -69,5 +91,7 @@ public class Plants {
         raingrass.register();
         volcapod.register();
         grovepod.register();
+        gemtree.register();
+        crystalis.register();
     }
 }
