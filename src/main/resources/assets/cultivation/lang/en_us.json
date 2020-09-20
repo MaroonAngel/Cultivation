@@ -26,5 +26,6 @@
     "item.cultivation.carrot_stew": "Carrot Stew",
     "item.patchouli.cultivation_guidebook": "Cultivation Guidebook",
     "block.cultivation.gemtree": "Gemtree Seeds",
-    "block.cultivation.crystalis": "Crystalis Seeds"
+    "block.cultivation.crystalis": "Crystalis Seeds",
+    "item.cultivation.watering_can": "Watering Can"
 }

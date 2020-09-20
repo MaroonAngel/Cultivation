@@ -52,6 +52,7 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
     private boolean twotall;
     private boolean partialharvest;
     private int tickRate;
+    private boolean canFertilize;
 
     public CropBlock(Settings settings, Identifier id, Identifier itemid) {
         super(settings);
@@ -59,6 +60,7 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
         this.id = id;
         this.twotall = false;
         this.partialharvest = false;
+        this.canFertilize = true;
         this.growthBoundingBoxes = CropBoundingBoxFactory.buildBoundingBoxes(new float[]{2, 4, 6, 8, 10, 12, 14, 16});
         this.setDefaultState(this.getDefaultState().with(HALF, DoubleBlockHalf.LOWER));
         this.tickRate = 25;
@@ -96,6 +98,16 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
         return this;
     }
 
+    public CropBlock setFertilizable(boolean fert) {
+        this.canFertilize = fert;
+        return this;
+    }
+
+    @Override
+    public boolean isFertilizable(BlockView world, BlockPos pos, BlockState state, boolean isClient) {
+        return !this.isMature(state) && this.canFertilize;
+    }
+
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState state2, WorldView world, BlockPos pos1, BlockPos pos2) {
         DoubleBlockHalf half = this.getBlockHalf(state);
         if (half.equals(DoubleBlockHalf.LOWER)) {
@@ -119,6 +131,7 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
         return state;
 
     }
+
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext context) {

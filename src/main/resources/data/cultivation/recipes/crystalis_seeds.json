@@ -7,10 +7,10 @@
   ],
   "key": {
     "G": {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:emerald_block"
     },
     "L": {
-      "item": "minecraft:lapis_lazuli"
+      "item": "minecraft:lapis_block"
     },
     "M": {
       "item": "cultivation:magma_core"
@@ -19,7 +19,7 @@
       "item": "cultivation:growth_core"
     },
     "E": {
-      "item": "minecraft:emerald"
+      "item": "cultivation:gemtree_seeds"
     }
   },
   "result": {

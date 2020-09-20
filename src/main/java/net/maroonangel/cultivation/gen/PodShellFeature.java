@@ -21,9 +21,10 @@ public class PodShellFeature extends Feature<DefaultFeatureConfig> {
     public boolean generate(StructureWorldAccess world, ChunkGenerator generator, Random random, BlockPos pos,
                             DefaultFeatureConfig config) {
         BlockPos topPos = world.getTopPosition(Heightmap.Type.WORLD_SURFACE, pos);
-        Direction offset = Direction.NORTH;
+        BlockPos belowPos = topPos.down();
 
-        world.setBlockState(topPos, Blocks.POD_SHELL.getDefaultState(), 3);
+        if (world.getBlockState(belowPos).getBlock() == net.minecraft.block.Blocks.SAND)
+            world.setBlockState(topPos, Blocks.POD_SHELL.getDefaultState(), 3);
         return true;
     }
 }

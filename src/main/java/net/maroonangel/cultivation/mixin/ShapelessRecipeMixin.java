@@ -6,9 +6,11 @@ import net.minecraft.inventory.Inventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.CraftingRecipe;
+import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.util.collection.DefaultedList;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 
@@ -19,7 +21,7 @@ public abstract class ShapelessRecipeMixin implements CraftingRecipe {
 
     }
 
-    //@Inject(method="getRemainingStacks", at = @At("HEAD"))
+    //@Inject(method="getRemainingStacks", at = @At("HEAD"), cancellable = true)
     public DefaultedList<ItemStack> getRemainingStacks(CraftingInventory inventory) {
         DefaultedList<ItemStack> list = DefaultedList.ofSize(inventory.size(), ItemStack.EMPTY);
 

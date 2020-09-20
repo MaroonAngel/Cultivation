@@ -2,6 +2,7 @@ package net.maroonangel.cultivation;
 
 import net.maroonangel.cultivation.item.Items;
 import net.maroonangel.cultivation.lib.crop.Crop;
+import net.maroonangel.cultivation.lib.crop.CropUnfertilizable;
 import net.maroonangel.cultivation.lib.factory.CropBoundingBoxFactory;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.util.Identifier;
@@ -74,7 +75,7 @@ public class Plants {
             .setTickRate(35)
             .build();
 
-    public static final Crop crystalis = new Crop(new Identifier(MODID, "crystalis"))
+    public static final CropUnfertilizable crystalis = new CropUnfertilizable(new Identifier(MODID, "crystalis"))
             .setItemGroup(Cultivation.GROUP)
             .setCropGrowthBoundingBoxes(CropBoundingBoxFactory.buildBoundingBoxes( new float[]{1, 2, 3, 4, 5, 6, 7, 8} ))
             .setSeperateSeed(true)

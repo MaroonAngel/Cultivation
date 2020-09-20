@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "cultivation:ironleaf_seeds"
+  },
+  "result": "minecraft:iron_nugget",
+  "experience": 0.7,
+  "cookingtime": 200
+}
