@@ -1,10 +1,10 @@
 package net.maroonangel.cultivation.lib.crop;
 
 import net.maroonangel.cultivation.Plants;
+import net.maroonangel.cultivation.init.ClientInit;
 import net.maroonangel.cultivation.lib.factory.CropBoundingBoxFactory;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
@@ -35,6 +35,8 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class CropBlock extends net.minecraft.block.CropBlock implements BlockEntityProvider {
@@ -53,6 +55,8 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
     private boolean partialharvest;
     private int tickRate;
     private boolean canFertilize;
+
+    public static List<Block> blocksToRender = new ArrayList<Block>();
 
     public CropBlock(Settings settings, Identifier id, Identifier itemid) {
         super(settings);
@@ -223,7 +227,7 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
 
 
     @Override
-    @Environment(EnvType.CLIENT)
+    //@Environment(EnvType.CLIENT)
     protected ItemConvertible getSeedsItem() {
         return Registry.ITEM.get(this.itemid);
     }
@@ -273,7 +277,7 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
     public void register(Identifier id) {
         Registry.register(Registry.BLOCK, id, this);
         this.entity = Registry.register(Registry.BLOCK_ENTITY_TYPE, id, BlockEntityType.Builder.create( () -> new CropBlockEntity(id), this).build(null));
-        BlockRenderLayerMap.INSTANCE.putBlock(this, RenderLayer.getCutout());
+        blocksToRender.add(this);
     }
 
     @Override
