@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "GLG",
-    "MER",
+    "OEO",
     "GLG"
   ],
   "key": {
@@ -12,14 +12,11 @@
     "L": {
       "item": "minecraft:lapis_block"
     },
-    "M": {
-      "item": "cultivation:magma_core"
-    },
-    "R": {
-      "item": "cultivation:growth_core"
+    "O": {
+      "item": "minecraft:gold_block"
     },
     "E": {
-      "item": "cultivation:gemtree_seeds"
+      "item": "cultivation:rich_seeds"
     }
   },
   "result": {

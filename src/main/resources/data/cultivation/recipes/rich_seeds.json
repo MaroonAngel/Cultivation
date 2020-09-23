@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "VNV",
+    "NBN",
+    "GNG"
+  ],
+  "key": {
+    "N": {
+      "item": "cultivation:niter_dust"
+    },
+    "B": {
+      "item": "cultivation:lush_seeds"
+    },
+    "V": {
+      "item": "cultivation:magma_core"
+    },
+    "G": {
+      "item": "cultivation:growth_core"
+    }
+  },
+  "result": {
+    "item": "cultivation:rich_seeds"
+  }
+}

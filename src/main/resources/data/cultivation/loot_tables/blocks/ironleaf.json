@@ -42,7 +42,7 @@
                 },
                 {
                   "condition": "random_chance",
-                  "chance": 0.3
+                  "chance": 0.35
                 }
               ],
               "name": "cultivation:niter_dust"
@@ -105,7 +105,7 @@
                 },
                 {
                   "condition": "random_chance",
-                  "chance": 0.25
+                  "chance": 0.3
                 }
               ],
               "name": "cultivation:gold_dust"

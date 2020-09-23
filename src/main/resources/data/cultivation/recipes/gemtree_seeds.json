@@ -10,7 +10,7 @@
       "item": "minecraft:redstone_block"
     },
     "S": {
-      "tag": "cultivation:pod_seeds"
+      "item": "cultivation:rich_seeds"
     },
     "L": {
       "item": "minecraft:lapis_block"
