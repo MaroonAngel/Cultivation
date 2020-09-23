@@ -86,6 +86,16 @@ public class Plants {
             .setTickRate(60)
             .build();
 
+    public static final Crop slimedrop = new Crop(new Identifier(MODID, "slimedrop"))
+            .setItemGroup(Cultivation.GROUP)
+            .setCropGrowthBoundingBoxes(CropBoundingBoxFactory.buildBoundingBoxes( new float[]{1, 2, 3, 4, 5, 6, 7, 8} ))
+            .setSeperateSeed(true)
+            .setSeedGroup(Cultivation.GROUP)
+            .setPartialHarvest(false)
+            .setItem(net.minecraft.item.Items.SLIME_BALL)
+            .setTickRate(25)
+            .build();
+
     public static void register() {
         cotton.register();
         ironleaf.register();
@@ -94,5 +104,6 @@ public class Plants {
         grovepod.register();
         gemtree.register();
         crystalis.register();
+        slimedrop.register();
     }
 }

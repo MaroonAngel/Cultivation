@@ -12,10 +12,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.maroonangel.cultivation.item.*;
 
+
 public class Cultivation implements ModInitializer {
 
 	public static final ItemGroup GROUP = FabricItemGroupBuilder.build(new Identifier("cultivation", "general"), () -> new ItemStack(Plants.cotton.getItem()));
 	public static final String MODID = "cultivation";
+
+
 
 	@Override
 	public void onInitialize() {

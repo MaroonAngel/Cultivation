@@ -201,7 +201,7 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> stateFactory$Builder_1) {
-        stateFactory$Builder_1.add(new Property[]{HALF});
+        stateFactory$Builder_1.add(HALF);
         super.appendProperties(stateFactory$Builder_1);
     }
 

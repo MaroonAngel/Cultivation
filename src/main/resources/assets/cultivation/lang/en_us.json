@@ -27,5 +27,10 @@
     "item.patchouli.cultivation_guidebook": "Cultivation Guidebook",
     "block.cultivation.gemtree": "Gemtree Seeds",
     "block.cultivation.crystalis": "Crystalis Seeds",
-    "item.cultivation.watering_can": "Watering Can"
+    "item.cultivation.watering_can": "Watering Can",
+    "item.cultivation.basic_seeds": "Basic Seeds",
+    "item.cultivation.lush_seeds": "Lush Seeds",
+    "item.cultivation.rich_seeds": "Rich Seeds",
+    "item.cultivation.nether_seeds": "Nether Seeds",
+    "block.cultivation.slimedrop": "Slimedrop Seeds"
 }

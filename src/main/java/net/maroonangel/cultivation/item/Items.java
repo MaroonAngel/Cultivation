@@ -9,6 +9,13 @@ import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 public class Items {
+
+    public static final Item BASIC_SEEDS = new Item((new Item.Settings().group(Cultivation.GROUP)));
+    public static final Item LUSH_SEEDS = new Item((new Item.Settings().group(Cultivation.GROUP)));
+    public static final Item RICH_SEEDS = new Item((new Item.Settings().group(Cultivation.GROUP)));
+    public static final Item NETHER_SEEDS = new Item((new Item.Settings().group(Cultivation.GROUP)));
+
+
     public static final Item IRON_DUST = new Item((new Item.Settings().group(Cultivation.GROUP)));
     public static final Item NITER_DUST = new Item((new Item.Settings().group(Cultivation.GROUP)));
     public static final Item GOLD_DUST = new Item((new Item.Settings().group(Cultivation.GROUP)));
@@ -30,6 +37,11 @@ public class Items {
     public static final ItemWateringCan WATERING_CAN = new ItemWateringCan((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(100)));
 
     public static void register() {
+        Registry.register(Registry.ITEM, new Identifier("cultivation", "basic_seeds"), BASIC_SEEDS);
+        Registry.register(Registry.ITEM, new Identifier("cultivation", "lush_seeds"), LUSH_SEEDS);
+        Registry.register(Registry.ITEM, new Identifier("cultivation", "rich_seeds"), RICH_SEEDS);
+        Registry.register(Registry.ITEM, new Identifier("cultivation", "nether_seeds"), NETHER_SEEDS);
+
         Registry.register(Registry.ITEM, new Identifier("cultivation", "iron_dust"), IRON_DUST);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "niter_dust"), NITER_DUST);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "gold_dust"), GOLD_DUST);

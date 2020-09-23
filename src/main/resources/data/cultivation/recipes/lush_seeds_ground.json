@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "cultivation:tier_two_seeds"
+    },
+    {
+      "item": "cultivation:mortar_and_pestle"
+    }
+  ],
+  "result": {
+    "item": "cultivation:lush_seeds",
+    "count": 1
+  }
+}

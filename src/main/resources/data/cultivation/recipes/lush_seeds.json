@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GIG",
+    "IBI",
+    "GIG"
+  ],
+  "key": {
+    "I": {
+      "item": "cultivation:iron_dust"
+    },
+    "B": {
+      "item": "cultivation:basic_seeds"
+    },
+    "G": {
+      "item": "cultivation:gold_dust"
+    }
+  },
+  "result": {
+    "item": "cultivation:lush_seeds"
+  }
+}

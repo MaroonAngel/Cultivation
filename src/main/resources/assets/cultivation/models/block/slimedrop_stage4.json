@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "cultivation:block/slimedrop_stage4"
+    }
+}

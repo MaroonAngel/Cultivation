@@ -1,25 +1,36 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "GIU",
-    "ISI",
-    "UIG"
-  ],
-  "key": {
-    "I": {
-      "item": "cultivation:iron_dust"
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:blue_dye"
     },
-    "S": {
-      "item": "cultivation:ironleaf_seeds"
+    {
+      "item": "minecraft:blue_dye"
     },
-    "U": {
-      "item": "cultivation:niter_dust"
+    {
+      "item": "minecraft:blue_dye"
     },
-    "G": {
-      "item": "cultivation:gold_dust"
+    {
+      "item": "minecraft:blue_dye"
+    },
+    {
+      "item": "minecraft:red_dye"
+    },
+    {
+      "item": "minecraft:red_dye"
+    },
+    {
+      "item": "minecraft:red_dye"
+    },
+    {
+      "item": "minecraft:red_dye"
+    },
+    {
+      "item": "cultivation:lush_seeds"
     }
-  },
+  ],
   "result": {
-    "item": "cultivation:raingrass_seeds"
+    "item": "cultivation:raingrass_seeds",
+    "count": 1
   }
 }

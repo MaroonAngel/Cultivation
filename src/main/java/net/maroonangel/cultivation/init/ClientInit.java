@@ -28,6 +28,7 @@ public class ClientInit implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(Plants.volcapod.getBlock(), RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Plants.gemtree.getBlock(), RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Plants.crystalis.getBlock(), RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Plants.slimedrop.getBlock(), RenderLayer.getCutout());
 
 
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks.SIEVE_BLOCK, RenderLayer.getCutout());

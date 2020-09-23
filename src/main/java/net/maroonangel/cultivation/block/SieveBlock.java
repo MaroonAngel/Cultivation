@@ -33,8 +33,8 @@ public class SieveBlock extends Block {
 
     public SieveBlock(Settings settings) {
         super(settings);
-        usable.add(new Pair<Item, Pair<Item, Integer>>(net.minecraft.item.Items.DIRT, new Pair<Item, Integer>(Items.PEBBLE, 2)));
-        usable.add(new Pair<Item, Pair<Item, Integer>>(net.minecraft.item.Items.GRAVEL, new Pair<Item, Integer>(net.minecraft.item.Items.FLINT, 1)));
+        usable.add(new Pair<Item, Pair<Item, Integer>>(net.minecraft.item.Items.DIRT, new Pair<Item, Integer>(Items.PEBBLE, 3)));
+        usable.add(new Pair<Item, Pair<Item, Integer>>(net.minecraft.item.Items.GRAVEL, new Pair<Item, Integer>(net.minecraft.item.Items.DIRT, 1)));
     }
 
     private Pair<Item, Integer> isUsable(Item item) {
@@ -59,11 +59,16 @@ public class SieveBlock extends Block {
             if (!player.abilities.creativeMode) {
                 itemStack.decrement(1);
             }
-            dropStack(world, pos, new ItemStack(Items.PEBBLE, world.random.nextInt(3)));
+            //dropStack(world, pos, new ItemStack(Items.PEBBLE, world.random.nextInt(3)));
+            dropStack(world, pos, new ItemStack(isUsable(itemStack.getItem()).getFirst().asItem(), isUsable(itemStack.getItem()).getSecond()));
 
             return ActionResult.SUCCESS;
         }
         return ActionResult.FAIL;
+    }
+
+    private Item getDroppedItem(ItemStack itemStack) {
+        return usable.get(usable.indexOf(itemStack)).getFirst().asItem();
     }
 
 }

@@ -7,10 +7,10 @@
   ],
   "key": {
     "I": {
-      "item": "cultivation:iron_dust"
+      "item": "minecraft:iron_ingot"
     },
     "D": {
-      "item": "minecraft:wheat_seeds"
+      "item": "cultivation:basic_seeds"
     }
   },
   "result": {
