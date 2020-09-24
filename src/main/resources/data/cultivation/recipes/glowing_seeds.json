@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GIG",
+    "IBI",
+    "GIG"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:shroomlight"
+    },
+    "B": {
+      "item": "cultivation:soul_seeds"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    }
+  },
+  "result": {
+    "item": "cultivation:glowing_seeds"
+  }
+}

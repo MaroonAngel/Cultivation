@@ -83,15 +83,6 @@
           ],
           "name": "cultivation:raingrass_seeds"
         }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:block_state_property",
-          "block": "cultivation:raingrass",
-          "properties": {
-            "age": "7"
-          }
-        }
       ]
     }
   ],

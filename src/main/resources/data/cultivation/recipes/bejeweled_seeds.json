@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GIG",
+    "DBD",
+    "GIG"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:emerald_block"
+    },
+    "B": {
+      "item": "cultivation:glowing_seeds"
+    },
+    "G": {
+      "item": "minecraft:gold_block"
+    },
+    "D": {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "result": {
+    "item": "cultivation:bejeweled_seeds"
+  }
+}

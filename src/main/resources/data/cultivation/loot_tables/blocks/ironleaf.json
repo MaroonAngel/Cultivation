@@ -132,15 +132,6 @@
           ],
           "name": "cultivation:ironleaf_seeds"
         }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:block_state_property",
-          "block": "cultivation:ironleaf",
-          "properties": {
-            "age": "7"
-          }
-        }
       ]
     }
   ],
