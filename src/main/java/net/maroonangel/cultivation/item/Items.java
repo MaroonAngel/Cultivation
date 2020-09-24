@@ -34,8 +34,6 @@ public class Items {
     public static final Item CACTUS_SLICE = new Item((new Item.Settings().group(Cultivation.GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.5F).build())));
     public static final Item CARROT_STEW = new Item((new Item.Settings().group(Cultivation.GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.6F).build()).recipeRemainder(net.minecraft.item.Items.BOWL)));
 
-    public static final ItemUtility MORTAR_AND_PESTLE = new ItemUtility((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(100)));
-    public static final ItemUtility KNIFE = new ItemUtility((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(100)));
     public static final ItemWateringCan WATERING_CAN = new ItemWateringCan((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(100)), false);
     public static final ItemWateringCan DIAMOND_WATERING_CAN = new ItemWateringCan((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(300)), true);
 
@@ -50,8 +48,6 @@ public class Items {
         Registry.register(Registry.ITEM, new Identifier("cultivation", "iron_dust"), IRON_DUST);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "niter_dust"), NITER_DUST);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "gold_dust"), GOLD_DUST);
-        Registry.register(Registry.ITEM, new Identifier("cultivation", "mortar_and_pestle"), MORTAR_AND_PESTLE);
-        Registry.register(Registry.ITEM, new Identifier("cultivation", "knife"), KNIFE);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "plant_fibers"), PLANT_FIBERS);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "pebble"), PEBBLE);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "magma_core"), MAGMA_CORE);

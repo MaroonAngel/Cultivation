@@ -2,9 +2,6 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "cultivation:mortar_and_pestle"
-    },
-    {
       "tag": "cultivation:nether_foliage"
     },
     {

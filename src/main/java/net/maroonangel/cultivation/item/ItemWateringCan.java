@@ -89,7 +89,7 @@ public class ItemWateringCan extends Item {
                         }
                     }
                 } else  {
-                    if (block instanceof CropBlock || block == Blocks.AIR) {
+                    if ((block instanceof CropBlock && canWater(block, world, pos, context))|| (block == Blocks.AIR && context.getStack().getDamage() < context.getStack().getMaxDamage())) {
                         createParticles(world, pos);
                     }
                 }
@@ -117,7 +117,7 @@ public class ItemWateringCan extends Item {
                             BlockPos newPos = new BlockPos(pos.getX() + x, pos.getY(), pos.getZ() + z);
                             Block bl = world.getBlockState(newPos).getBlock();
                             if (bl instanceof CropBlock || bl == Blocks.AIR) {
-                                if (canWater(bl, world, pos, context) || bl == Blocks.AIR)
+                                if (canWater(bl, world, pos, context) || (bl == Blocks.AIR && context.getStack().getDamage() < context.getStack().getMaxDamage()) )
                                     createParticles(world, newPos);
                             }
                         }
