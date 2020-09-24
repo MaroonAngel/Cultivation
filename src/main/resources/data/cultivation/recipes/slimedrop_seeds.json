@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WIW",
+    "IDI",
+    "WIW"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:green_dye"
+    },
+    "D": {
+      "item": "cultivation:lush_seeds"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "result": {
+    "item": "cultivation:slimedrop_seeds",
+    "count": 1
+  }
+}

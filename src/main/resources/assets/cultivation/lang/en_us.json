@@ -31,6 +31,12 @@
     "item.cultivation.basic_seeds": "Basic Seeds",
     "item.cultivation.lush_seeds": "Lush Seeds",
     "item.cultivation.rich_seeds": "Rich Seeds",
-    "item.cultivation.nether_seeds": "Nether Seeds",
-    "block.cultivation.slimedrop": "Slimedrop Seeds"
+    "item.cultivation.glowing_seeds": "Glowing Seeds",
+    "block.cultivation.slimedrop": "Slimedrop Seeds",
+    "block.cultivation.blazehearth": "Blazehearth Seeds",
+    "item.cultivation.soul_seeds": "Soul Seeds",
+    "item.cultivation.bejeweled_seeds": "Bejeweled Seeds",
+    "block.cultivation.quartzglass": "Quartzglass Seeds",
+    "block.cultivation.piglins_bounty": "Piglin's Bounty Seeds",
+    "item.cultivation.diamond_watering_can": "Diamond Watering Can"
 }

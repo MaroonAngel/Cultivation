@@ -2,9 +2,7 @@ package net.maroonangel.cultivation;
 
 import net.maroonangel.cultivation.item.Items;
 import net.maroonangel.cultivation.lib.crop.Crop;
-import net.maroonangel.cultivation.lib.crop.CropUnfertilizable;
 import net.maroonangel.cultivation.lib.factory.CropBoundingBoxFactory;
-import net.minecraft.item.FoodComponent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
@@ -28,7 +26,6 @@ public class Plants {
             .setSeedGroup(Cultivation.GROUP)
             .setPartialHarvest(false)
             .setItem(Items.IRON_DUST)
-            .setSeedRarity(Rarity.UNCOMMON)
             .setTickRate(15)
             .build();
 
@@ -75,7 +72,7 @@ public class Plants {
             .setTickRate(35)
             .build();
 
-    public static final CropUnfertilizable crystalis = new CropUnfertilizable(new Identifier(MODID, "crystalis"))
+    public static final Crop crystalis = new Crop(new Identifier(MODID, "crystalis"))
             .setItemGroup(Cultivation.GROUP)
             .setCropGrowthBoundingBoxes(CropBoundingBoxFactory.buildBoundingBoxes( new float[]{1, 2, 3, 4, 5, 6, 7, 8} ))
             .setSeperateSeed(true)
@@ -84,6 +81,7 @@ public class Plants {
             .setItem(net.minecraft.item.Items.DIAMOND)
             .setSeedRarity(Rarity.RARE)
             .setTickRate(60)
+            .setFertilizable(false)
             .build();
 
     public static final Crop slimedrop = new Crop(new Identifier(MODID, "slimedrop"))
@@ -96,6 +94,39 @@ public class Plants {
             .setTickRate(25)
             .build();
 
+    public static final Crop piglins_bounty = new Crop(new Identifier(MODID, "piglins_bounty"))
+            .setItemGroup(Cultivation.GROUP)
+            .setCropGrowthBoundingBoxes(CropBoundingBoxFactory.buildBoundingBoxes( new float[]{1, 2, 3, 4, 5, 6, 7, 8} ))
+            .setSeperateSeed(true)
+            .setSeedGroup(Cultivation.GROUP)
+            .setPartialHarvest(false)
+            .setItem(net.minecraft.item.Items.GOLD_NUGGET)
+            .setTickRate(25)
+            .setNetherCrop(true)
+            .build();
+
+    public static final Crop quartzglass = new Crop(new Identifier(MODID, "quartzglass"))
+            .setItemGroup(Cultivation.GROUP)
+            .setCropGrowthBoundingBoxes(CropBoundingBoxFactory.buildBoundingBoxes( new float[]{1, 2, 3, 4, 5, 6, 7, 8} ))
+            .setSeperateSeed(true)
+            .setSeedGroup(Cultivation.GROUP)
+            .setPartialHarvest(false)
+            .setItem(net.minecraft.item.Items.QUARTZ)
+            .setTickRate(30)
+            .setNetherCrop(true)
+            .build();
+
+    public static final Crop blazehearth = new Crop(new Identifier(MODID, "blazehearth"))
+            .setItemGroup(Cultivation.GROUP)
+            .setCropGrowthBoundingBoxes(CropBoundingBoxFactory.buildBoundingBoxes( new float[]{1, 2, 3, 4, 5, 6, 7, 8} ))
+            .setSeperateSeed(true)
+            .setSeedGroup(Cultivation.GROUP)
+            .setPartialHarvest(false)
+            .setItem(net.minecraft.item.Items.BLAZE_ROD)
+            .setTickRate(30)
+            .setNetherCrop(true)
+            .build();
+
     public static void register() {
         cotton.register();
         ironleaf.register();
@@ -105,5 +136,8 @@ public class Plants {
         gemtree.register();
         crystalis.register();
         slimedrop.register();
+        piglins_bounty.register();
+        quartzglass.register();
+        blazehearth.register();
     }
 }

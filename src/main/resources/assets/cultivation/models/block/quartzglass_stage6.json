@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "cultivation:block/quartzglass_stage6"
+    }
+}

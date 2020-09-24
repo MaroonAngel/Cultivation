@@ -32,6 +32,8 @@ public class Crop {
     private boolean twotall;
     private boolean partialharvest;
     private boolean customItem;
+    private boolean fertilizable;
+    private boolean netherCrop;
 
     private int tickRate;
 
@@ -49,6 +51,8 @@ public class Crop {
         this.growthBoundingBoxes = null;
         this.tickRate = 25;
         this.rarity = Rarity.COMMON;
+        this.fertilizable = true;
+        this.netherCrop = false;
     }
 
     public Crop setSeperateSeed(boolean seperateseed) {
@@ -126,12 +130,25 @@ public class Crop {
         return this;
     }
 
+    public Crop setFertilizable(boolean fert) {
+        this.fertilizable = fert;
+        return this;
+    }
+
+    public Crop setNetherCrop(boolean nether) {
+        this.netherCrop = nether;
+        return this;
+    }
+
     public Crop build() {
         this.block = new CropBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).build(), this.id, this.getSeedId())
                 .setGrowthBoundingBoxes(this.growthBoundingBoxes)
                 .setTwoTall(this.twotall)
                 .setPartialHarvest(this.partialharvest)
-                .setTickRate(this.tickRate);
+                .setTickRate(this.tickRate)
+                .setFertilizable(this.fertilizable)
+                .setNetherCrop(this.netherCrop);
+
         if (this.seperateseed) {
             this.seed = new CropItem(this.block, new Item.Settings().group(this.seedgroup).rarity(this.rarity));
             if (item == null)

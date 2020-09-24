@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I ",
+    "IDI",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:gold_ingot"
+    },
+    "D": {
+      "item": "cultivation:soul_seeds"
+    }
+  },
+  "result": {
+    "item": "cultivation:piglins_bounty_seeds"
+  }
+}

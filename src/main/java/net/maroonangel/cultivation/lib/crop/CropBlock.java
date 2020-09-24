@@ -55,6 +55,7 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
     private boolean partialharvest;
     private int tickRate;
     private boolean canFertilize;
+    private boolean netherCrop;
 
     public static List<Block> blocksToRender = new ArrayList<Block>();
 
@@ -65,6 +66,7 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
         this.twotall = false;
         this.partialharvest = false;
         this.canFertilize = true;
+        this.netherCrop = false;
         this.growthBoundingBoxes = CropBoundingBoxFactory.buildBoundingBoxes(new float[]{2, 4, 6, 8, 10, 12, 14, 16});
         this.setDefaultState(this.getDefaultState().with(HALF, DoubleBlockHalf.LOWER));
         this.tickRate = 25;
@@ -81,6 +83,11 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
             });
         }
         state.onStacksDropped((ServerWorld)world, pos, stack);
+    }
+
+    public CropBlock setNetherCrop(boolean nether) {
+        this.netherCrop = nether;
+        return this;
     }
 
     public boolean isTwoTall() {
@@ -110,6 +117,14 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
     @Override
     public boolean isFertilizable(BlockView world, BlockPos pos, BlockState state, boolean isClient) {
         return !this.isMature(state) && this.canFertilize;
+    }
+
+    @Override
+    protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
+        if (this.netherCrop)
+            return floor.isOf(Blocks.SOUL_SAND) || floor.isOf(Blocks.SOUL_SOIL);
+        else
+            return floor.isOf(Blocks.FARMLAND);
     }
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState state2, WorldView world, BlockPos pos1, BlockPos pos2) {

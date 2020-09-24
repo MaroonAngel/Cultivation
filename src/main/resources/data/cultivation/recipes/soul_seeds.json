@@ -6,10 +6,13 @@
     },
     {
       "tag": "cultivation:nether_foliage"
+    },
+    {
+      "tag": "minecraft:soul_fire_base_blocks"
     }
   ],
   "result": {
-    "item": "cultivation:nether_seeds",
+    "item": "cultivation:soul_seeds",
     "count": 1
   }
 }

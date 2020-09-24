@@ -13,7 +13,9 @@ public class Items {
     public static final Item BASIC_SEEDS = new Item((new Item.Settings().group(Cultivation.GROUP)));
     public static final Item LUSH_SEEDS = new Item((new Item.Settings().group(Cultivation.GROUP)));
     public static final Item RICH_SEEDS = new Item((new Item.Settings().group(Cultivation.GROUP)));
-    public static final Item NETHER_SEEDS = new Item((new Item.Settings().group(Cultivation.GROUP)));
+    public static final Item SOUL_SEEDS = new Item((new Item.Settings().group(Cultivation.GROUP)));
+    public static final Item GLOWING_SEEDS = new Item((new Item.Settings().group(Cultivation.GROUP)));
+    public static final Item BEJEWELED_SEEDS = new Item((new Item.Settings().group(Cultivation.GROUP)));
 
 
     public static final Item IRON_DUST = new Item((new Item.Settings().group(Cultivation.GROUP)));
@@ -34,13 +36,16 @@ public class Items {
 
     public static final ItemUtility MORTAR_AND_PESTLE = new ItemUtility((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(100)));
     public static final ItemUtility KNIFE = new ItemUtility((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(100)));
-    public static final ItemWateringCan WATERING_CAN = new ItemWateringCan((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(100)));
+    public static final ItemWateringCan WATERING_CAN = new ItemWateringCan((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(100)), false);
+    public static final ItemWateringCan DIAMOND_WATERING_CAN = new ItemWateringCan((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(300)), true);
 
     public static void register() {
         Registry.register(Registry.ITEM, new Identifier("cultivation", "basic_seeds"), BASIC_SEEDS);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "lush_seeds"), LUSH_SEEDS);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "rich_seeds"), RICH_SEEDS);
-        Registry.register(Registry.ITEM, new Identifier("cultivation", "nether_seeds"), NETHER_SEEDS);
+        Registry.register(Registry.ITEM, new Identifier("cultivation", "soul_seeds"), SOUL_SEEDS);
+        Registry.register(Registry.ITEM, new Identifier("cultivation", "glowing_seeds"), GLOWING_SEEDS);
+        Registry.register(Registry.ITEM, new Identifier("cultivation", "bejeweled_seeds"), BEJEWELED_SEEDS);
 
         Registry.register(Registry.ITEM, new Identifier("cultivation", "iron_dust"), IRON_DUST);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "niter_dust"), NITER_DUST);
@@ -60,6 +65,7 @@ public class Items {
         Registry.register(Registry.ITEM, new Identifier("cultivation", "carrot_stew"), CARROT_STEW);
 
         Registry.register(Registry.ITEM, new Identifier("cultivation", "watering_can"), WATERING_CAN);
+        Registry.register(Registry.ITEM, new Identifier("cultivation", "diamond_watering_can"), DIAMOND_WATERING_CAN);
 
         FuelRegistry.INSTANCE.add(MAGMA_CORE, 20000);
     }

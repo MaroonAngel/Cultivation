@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PNP",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:blaze_powder"
+    },
+    "N": {
+      "item": "cultivation:soul_seeds"
+    }
+  },
+  "result": {
+    "item": "cultivation:blazehearth_seeds",
+    "count": 1
+  }
+}

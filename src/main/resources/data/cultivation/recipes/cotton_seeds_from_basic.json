@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SDS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:string"
+    },
+    "D": {
+      "item": "cultivation:basic_seeds"
+    }
+  },
+  "result": {
+    "item": "cultivation:cotton_seeds"
+  }
+}

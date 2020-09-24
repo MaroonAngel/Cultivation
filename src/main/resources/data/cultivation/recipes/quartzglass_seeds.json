@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GIG",
+    "IDI",
+    "GIG"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:quartz"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "D": {
+      "item": "cultivation:soul_seeds"
+    }
+  },
+  "result": {
+    "item": "cultivation:quartzglass_seeds"
+  }
+}

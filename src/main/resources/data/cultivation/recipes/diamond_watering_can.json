@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I  ",
+    "IWI",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:diamond"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "result": {
+    "item": "cultivation:diamond_watering_can"
+  }
+}
