@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "cultivation:cotton"
+    },
+    "title": {
+      "translate": "advancements.cultivation.root.title"
+    },
+    "description": {
+      "translate": "advancements.cultivation.root.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "minecraft:textures/block/grass_path_top.png"
+  },
+  "criteria": {
+    "consumed_item": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {}
+    }
+  },
+  "requirements": [
+    [
+      "consumed_item"
+    ]
+  ]
+}

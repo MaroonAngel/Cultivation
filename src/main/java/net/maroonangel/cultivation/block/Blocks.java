@@ -24,9 +24,7 @@ public class Blocks {
 
     public static void register() {
         Registry.register(Registry.BLOCK, new Identifier("cultivation", "sieve_block"), SIEVE_BLOCK);
-
         Registry.register(Registry.ITEM, new Identifier("cultivation", "sieve_block"), new BlockItem(SIEVE_BLOCK, new Item.Settings().group(Cultivation.GROUP)));
-
         Registry.register(Registry.BLOCK, new Identifier("cultivation", "pod_shell"), POD_SHELL);
     }
 

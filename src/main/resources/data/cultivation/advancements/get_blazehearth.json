@@ -1,0 +1,35 @@
+{
+  "parent": "cultivation:get_tier_4",
+  "display": {
+    "icon": {
+      "item": "cultivation:blazehearth_seeds"
+    },
+    "title": {
+      "translate": "advancements.cultivation.blazehearth.title"
+    },
+    "description": {
+      "translate": "advancements.cultivation.blazehearth.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "seeds": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "cultivation:blazehearth_seeds"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "seeds"
+    ]
+  ]
+}

@@ -331,6 +331,7 @@ public class CropBlock extends net.minecraft.block.CropBlock implements BlockEnt
             int age = this.getAge(state);
             if (age < this.getMaxAge()) {
                 float moisture = getAvailableMoisture(this, server, pos);
+                if (netherCrop) moisture = 5;
                 if (rand.nextInt((int)((float)this.tickRate / moisture) + 1) == 0) {
                     server.setBlockState(pos, this.withAge(age + 1));
                     if (this.twotall) {

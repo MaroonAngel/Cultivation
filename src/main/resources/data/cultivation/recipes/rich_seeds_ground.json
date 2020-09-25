@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "cultivation:tier_three_seeds"
+    }
+  ],
+  "result": {
+    "item": "cultivation:rich_seeds",
+    "count": 1
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "parent": "cultivation:root",
+  "display": {
+    "icon": {
+      "item": "cultivation:ironleaf_seeds"
+    },
+    "title": {
+      "translate": "advancements.cultivation.plant_seed.title"
+    },
+    "description": {
+      "translate": "advancements.cultivation.plant_seed.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ironleaf": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "cultivation:ironleaf"
+      }
+    },
+    "cotton": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "cultivation:cotton"
+      }
+    }  },
+  "requirements": [
+    [
+      "ironleaf",
+      "cotton"
+    ]
+  ]
+}

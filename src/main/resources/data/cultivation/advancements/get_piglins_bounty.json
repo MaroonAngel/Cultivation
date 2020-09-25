@@ -1,0 +1,35 @@
+{
+  "parent": "cultivation:get_tier_4",
+  "display": {
+    "icon": {
+      "item": "cultivation:piglins_bounty_seeds"
+    },
+    "title": {
+      "translate": "advancements.cultivation.get_piglins_bounty.title"
+    },
+    "description": {
+      "translate": "advancements.cultivation.get_piglins_bounty.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "seeds": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "cultivation:piglins_bounty_seeds"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "seeds"
+    ]
+  ]
+}

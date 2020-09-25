@@ -1,0 +1,35 @@
+{
+  "parent": "cultivation:plant_seed",
+  "display": {
+    "icon": {
+      "item": "cultivation:lush_seeds"
+    },
+    "title": {
+      "translate": "advancements.cultivation.get_tier_2.title"
+    },
+    "description": {
+      "translate": "advancements.cultivation.get_tier_2.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "lush_seeds": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "cultivation:lush_seeds"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "lush_seeds"
+    ]
+  ]
+}
