@@ -33,6 +33,8 @@ public class Items {
     public static final Item JAMMY_BREAD = new Item((new Item.Settings().group(Cultivation.GROUP).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.5F).build())));
     public static final Item CACTUS_SLICE = new Item((new Item.Settings().group(Cultivation.GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.5F).build())));
     public static final Item CARROT_STEW = new Item((new Item.Settings().group(Cultivation.GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.6F).build()).recipeRemainder(net.minecraft.item.Items.BOWL)));
+    public static final Item APPLE_PIE = new Item((new Item.Settings().group(Cultivation.GROUP).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.7F).build())));
+
 
     public static final ItemWateringCan WATERING_CAN = new ItemWateringCan((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(100)), false);
     public static final ItemWateringCan DIAMOND_WATERING_CAN = new ItemWateringCan((new Item.Settings().group(Cultivation.GROUP).maxCount(1).maxDamage(300)), true);
@@ -59,6 +61,7 @@ public class Items {
         Registry.register(Registry.ITEM, new Identifier("cultivation", "jammy_bread"), JAMMY_BREAD);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "cactus_slice"), CACTUS_SLICE);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "carrot_stew"), CARROT_STEW);
+        Registry.register(Registry.ITEM, new Identifier("cultivation", "apple_pie"), APPLE_PIE);
 
         Registry.register(Registry.ITEM, new Identifier("cultivation", "watering_can"), WATERING_CAN);
         Registry.register(Registry.ITEM, new Identifier("cultivation", "diamond_watering_can"), DIAMOND_WATERING_CAN);
