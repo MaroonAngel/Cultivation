@@ -11,7 +11,16 @@ public class Compostibles {
     public static void register() {
         registerCompostableItem(0.4F, Items.PLANT_FIBERS);
         registerCompostableItem(0.25F, Plants.cotton.getSeed());
-        registerCompostableItem(1F, Plants.ironleaf.getSeed());
+        registerCompostableItem(0.6F, Plants.ironleaf.getSeed());
+        registerCompostableItem(0.65F, Plants.raingrass.getSeed());
+        registerCompostableItem(0.7F, Plants.volcapod.getSeed());
+        registerCompostableItem(0.7F, Plants.grovepod.getSeed());
+        registerCompostableItem(0.7F, Plants.gemtree.getSeed());
+        registerCompostableItem(0.1F, Plants.crystalis.getSeed());
+        registerCompostableItem(0.7F, Plants.slimedrop.getSeed());
+        registerCompostableItem(0.7F, Plants.piglins_bounty.getSeed());
+        registerCompostableItem(0.7F, Plants.quartzglass.getSeed());
+        registerCompostableItem(0.7F, Plants.blazehearth.getSeed());
     }
 
     public static void registerCompostableItem(float chance, ItemConvertible item)
@@ -22,3 +31,4 @@ public class Compostibles {
         }
     }
 }
+
